@@ -1,0 +1,34 @@
+# INSTRUCOES PARA INSTALAR
+
+## PASSO 1: Clique em "Cancelar"
+Clique no botao **Cancelar** da janela de erro
+
+## PASSO 2: Remova a extensao quebrada
+1. Na pagina `chrome://extensions/`
+2. Procure por "Net Escola Auto Responder"
+3. Clique em **Remover** (botao vermelho)
+
+## PASSO 3: Baixe os arquivos CORRIGIDOS
+1. Vá para: https://github.com/rossettirosane-ctrl/net-escola-enem-auto-responder
+2. Clique em **Code** (botao verde)
+3. Clique em **Download ZIP**
+4. Extraia em uma pasta (ex: Desktop)
+
+## PASSO 4: Carregue novamente
+1. Volte para `chrome://extensions/`
+2. Clique em **Carregar extensao nao empacotada**
+3. Selecione a PASTA (nao o arquivo ZIP)
+4. Pronto! ✓
+
+## PASSO 5: Use
+1. Abra o Net Escola
+2. Abra uma questao
+3. A extensao responde AUTOMATICAMENTE!
+
+---
+
+**Se nao funcionar:**
+- Pressione F12 (DevTools)
+- Vá em Console
+- Veja se aparece mensagem "✓ Questao encontrada!"
+- Se nao aparecer, a estrutura do site mudou

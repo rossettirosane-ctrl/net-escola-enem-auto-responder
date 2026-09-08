@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Net Escola Auto Responder",
+  "version": "1.0.0",
+  "description": "Responde automaticamente questoes do ENEM",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.netescola.com.br/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.netescola.com.br/*"],
+      "js": ["auto-responder.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
