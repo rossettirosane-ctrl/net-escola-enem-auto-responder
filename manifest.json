@@ -1,21 +1,50 @@
 {
   "manifest_version": 3,
-  "name": "Net Escola Auto Responder",
-  "version": "1.0.0",
-  "description": "Responde automaticamente questoes do ENEM",
+  "name": "Auto Responder ENEM",
+  "version": "2.0.0",
+  "description": "Responde automaticamente questoes do ENEM no Net Escola",
   "permissions": [
     "activeTab",
     "scripting",
     "storage"
   ],
   "host_permissions": [
-    "*://*.netescola.com.br/*"
+    "*://*.netescola.com.br/*",
+    "*://netescola.com.br/*",
+    "*://*.ifa.com.br/*"
   ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Auto Responder ENEM",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
   "content_scripts": [
     {
-      "matches": ["*://*.netescola.com.br/*"],
+      "matches": [
+        "*://*.netescola.com.br/*",
+        "*://netescola.com.br/*",
+        "*://*.ifa.com.br/*"
+      ],
       "js": ["auto-responder.js"],
       "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["*://*.netescola.com.br/*", "*://netescola.com.br/*", "*://*.ifa.com.br/*"]
     }
   ]
 }
