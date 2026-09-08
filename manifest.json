@@ -1,13 +1,1 @@
-{
-  "manifest_version": 3,
-  "name": "Auto Responder ENEM",
-  "version": "1.0.0",
-  "description": "Responde automaticamente questoes do ENEM",
-  "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["*://*.netescola.com.br/*"],
-  "content_scripts": [{
-    "matches": ["*://*.netescola.com.br/*"],
-    "js": ["responder.js"],
-    "run_at": "document_idle"
-  }]
-}
+{"manifest_version":3,"name":"Auto Responder","version":"1.0.0","description":"Responde questoes","permissions":["activeTab","scripting"],"host_permissions":["*://*.netescola.com.br/*"],"content_scripts":[{"matches":["*://*.netescola.com.br/*"],"js":["responder.js"],"run_at":"document_idle"}]}
